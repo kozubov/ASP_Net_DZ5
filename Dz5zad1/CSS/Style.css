@@ -1,0 +1,174 @@
+﻿body {
+    font-family: Roboto;
+}
+.dropbtn {
+    background-color: #676766;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    transition: 0.5s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #676766;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: 0.5s;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #8c8c85;
+            color: #1f91e4;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #1f91e4;
+}
+.menu {
+    display: flex;
+    background-color: #676766;
+}
+h2 {
+    text-align: center;
+    color: #1f91e4;
+}
+.div_border {
+    width: 50%;
+    border: 1px solid #1f91e4;
+    margin-top: 45px;
+    border-radius: 4px;
+}
+.control-label {
+    text-align: center;
+    margin-top: 4px;
+    font-size: 15px;
+}
+.div_row {
+    margin-top: 13px;
+}
+.form-control {
+    color: black;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 4px;
+}
+.btn-default {
+    border-style: none;
+    padding: 7px 50px;
+    background-color: #676766;
+    float: right;
+    margin: 20px 0 13px;
+    color: white;
+    transition: 0.5s
+}
+    .btn-default:hover {
+        color: black;
+        background-color: #1f91e4;
+    }
+.div_table {
+    width: 100%;
+}
+.div_conteiner_table {
+    width: 50%;
+    margin-top: 45px;
+}
+.div_table th {
+    background-color: #1f91e4;
+    padding: 4px 6px;
+    text-align: center;
+    border: 1px solid #1f91e4;
+}
+.div_table td {
+    border: 1px solid #1f91e4;
+    padding: 4px 6px;
+    text-align: center;
+}
+
+.div_table td a {
+    display: block;
+    padding: 3px;
+    background-color: #676766;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+    .div_table td a:hover {
+        background-color: #1f91e4;
+        color: black;
+    }
+.create {
+    display: block;
+    text-decoration: none;
+    float: right;
+    padding: 7px 50px;
+    margin: 20px 0;
+    border: 1px solid #1f91e4;
+    color: #1f91e4;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+    .create:hover {
+        background-color: #1f91e4;
+        color: black;
+        text-decoration: none;
+    }
+.div_podrobnee {
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #1f91e4;
+    margin-top: 45px;
+    border-radius: 4px;
+}
+.left {
+    color: #1f91e4;
+    padding: 8px 0;
+}
+.right {
+    color: black;
+    padding: 8px 0;
+}
+.rad_check {
+    padding: 6px 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.text-danger {
+    color: #f00!important;
+}
+
+
+
+.input-validation-error {
+    border: 1px solid #f00 !important;
+    background-color: #fee !important;
+}
+
+.field-validation-valid {
+    display: none;
+}
+

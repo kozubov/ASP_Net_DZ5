@@ -1,0 +1,40 @@
+﻿@model Dz5zad1.Models.Author
+
+@{
+    ViewBag.Title = "Learn_More";
+    Layout = "~/Views/_LayoutMVC.cshtml";
+}
+
+<h2>Автор</h2>
+
+<div>
+    <div class="container div_podrobnee">
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.DateOfBirth, new { htmlAttributes = new { @Value = @Model.DateOfBirth.ToString("MM/dd/yyyy") } })
+            </div>
+        </div>
+        @if (!@Model.DateOfDeath.ToString("MM/dd/yyyy").Equals("01.01.0001"))
+        {
+            <div class="row">
+                <div class="col-md-6 left">
+                    @Html.DisplayNameFor(model => model.DateOfDeath)
+                </div>
+                <div class="col-md-6 right">
+                    @Html.DisplayFor(model => model.DateOfDeath, new { htmlAttributes = new { @Value = @Model.DateOfDeath.ToString("MM/dd/yyyy")} })
+                </div>
+            </div>
+        }
+    </div>
+ </div>

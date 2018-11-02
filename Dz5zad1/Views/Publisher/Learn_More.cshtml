@@ -1,0 +1,21 @@
+﻿@model Dz5zad1.Models.Publisher
+
+@{
+    ViewBag.Title = "Learn_More";
+    Layout = "~/Views/_LayoutMVC.cshtml";
+}
+
+<h2>Подробнее</h2>
+
+<div>
+    <div class="container div_podrobnee">
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>
+    </div>
+</div>

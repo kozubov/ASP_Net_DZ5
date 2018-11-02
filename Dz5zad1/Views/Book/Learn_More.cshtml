@@ -1,0 +1,70 @@
+﻿@model Dz5zad1.Models.Book
+
+@{
+    ViewBag.Title = "Learn_More";
+    Layout = "~/Views/_LayoutMVC.cshtml";
+}
+
+<h2>Книга</h2>
+
+<div>
+    <div class="container div_podrobnee">
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>
+        @if (Model.publisher != null)
+        {
+            <div class="row">
+                <div class="col-md-6 left">
+                    @Html.DisplayNameFor(model => model.publisher)
+                </div>
+                <div class="col-md-6 right">
+                    @Html.DisplayFor(model => model.publisher.Name)
+                </div>
+            </div>
+        }
+        @if (Model.Authors.ToList().Count != 0)
+        {
+            <div class="row">
+                <div class="col-md-6 left">
+                    @Html.DisplayNameFor(model => model.Authors)
+                </div>
+                <div class="col-md-6 right">
+                    @foreach (var item in Model.Authors)
+                    {
+                        @Html.DisplayFor(model => item.Name) @:
+                    }
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.PublishDate)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.PublishDate, new { htmlAttributes = new { @Value = @Model.PublishDate.ToString("MM/dd/yyyy"), @class = "customclass" } })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.PageCount)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.PageCount)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.ISBN)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.ISBN)
+            </div>
+        </div>
+    </div> 
+</div>

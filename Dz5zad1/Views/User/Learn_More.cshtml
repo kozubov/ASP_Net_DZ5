@@ -1,0 +1,71 @@
+﻿@model Dz5zad1.Models.User
+
+@{
+    ViewBag.Title = "Learn_More";
+    Layout = "~/Views/_LayoutMVC.cshtml";
+}
+
+<h2>Пользователь</h2>
+<div>
+    <div class="container div_podrobnee">
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.FirstName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.LastName)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.LastName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Login)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Login)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Passvord)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Passvord)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Email)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Email)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 left">
+                @Html.DisplayNameFor(model => model.Phone)
+            </div>
+            <div class="col-md-6 right">
+                @Html.DisplayFor(model => model.Phone)
+            </div>
+        </div>
+        @if (Model.Role != null)
+        {
+            <div class="row">
+                <div class="col-md-6 left">
+                    @Html.DisplayNameFor(model => model.Role)
+                </div>
+                <div class="col-md-6 right">
+                    @Html.DisplayFor(model => model.Role.Name)
+                </div>
+            </div>
+        }
+        </div>
+</div>

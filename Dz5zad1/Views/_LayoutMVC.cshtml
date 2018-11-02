@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/CSS/Style.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="dropdown">
+            <button class="dropbtn">Пользователь</button>
+            <div class="dropdown-content">
+                @Html.RouteLink("Добавить пользователя", new { controller = "User", action = "Index" })
+                @Html.RouteLink("Список пользователей", new { controller = "User", action = "Show_Table" })
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Роль</button>
+            <div class="dropdown-content">
+                @Html.RouteLink("Добавить роль", new { controller = "Role", action = "Index" })
+                @Html.RouteLink("Список ролей", new { controller = "Role", action = "Show_Table" })
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Книга</button>
+            <div class="dropdown-content">
+                @Html.RouteLink("Добавить книгу", new { controller = "Book", action = "Index" })
+                @Html.RouteLink("Список книг", new { controller = "Book", action = "Show_Table" })
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Автор</button>
+            <div class="dropdown-content">
+                @Html.RouteLink("Добавить автора", new { controller = "Author", action = "Index" })
+                @Html.RouteLink("Список авторов", new { controller = "Author", action = "Show_Table" })
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Издательство</button>
+            <div class="dropdown-content">
+                @Html.RouteLink("Добавить издательство", new { controller = "Publisher", action = "Index" })
+                @Html.RouteLink("Список издательств", new { controller = "Publisher", action = "Show_Table" })
+            </div>
+        </div>
+    </div>
+<div>
+    @RenderBody()
+</div>
+<script src="~/Bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

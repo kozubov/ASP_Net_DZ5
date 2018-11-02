@@ -1,0 +1,17 @@
+﻿@using Dz5zad1.Helpers;
+@using Dz5zad1.Models;
+@{
+    ViewBag.Title = "Show_Table";
+    Layout = "~/Views/_LayoutMVC.cshtml";
+    IEnumerable<Role> roles = ViewBag.Roles;
+}
+
+<h2>Таблица ролей</h2>
+<div class="container div_conteiner_table">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            @Html.Show_Table(roles, publi => { return $"<td>{@Html.ActionLink("Подробнее", "Learn_More", new { id = publi.Id })}</td><td>{@Html.ActionLink("Редактировать", "Edit", new { id = publi.Id })}</td><td>{@Html.ActionLink("Удалить", "Delete", new { id = publi.Id })}</td>"; })
+            @Html.ActionLink("Добавить", "Index",null,new{@class="create"})
+        </div>
+    </div>
+</div>
